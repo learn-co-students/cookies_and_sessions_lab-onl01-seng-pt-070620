@@ -10,7 +10,8 @@ class ProductsController < ApplicationController
 
     def add
         cart << product_params
-        redirect_to :products
+        render :index
+        # redirect_to :products
     end 
 
     def product_params
