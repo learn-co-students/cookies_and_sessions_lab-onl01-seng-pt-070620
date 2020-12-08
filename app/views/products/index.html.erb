@@ -1,0 +1,15 @@
+<h1>Welcome to Homepage </h1>
+<h3>your current items: </h3>
+<ul>
+<% cart.each do |item| %>
+<li><%= item %></li>
+<%end%>
+</ul>
+
+<h3>add new items:</h3>
+
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do %>
+<input name=product>
+<input type=submit value='add to cart'>
+<% end %>
+
